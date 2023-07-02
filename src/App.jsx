@@ -12,9 +12,9 @@ function App() {
     <>
       <SkeletonTheme baseColor="#313131" highlightColor="#525252">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/Collection" element={<Collection />} />
-          <Route path="/product/:id" element={<Product />} />
+          <Route path="/E-commerce/" element={<Home />} />
+          <Route path="/E-commerce/Collection" element={<Collection />} />
+          <Route path="/E-commerce/product/:id" element={<Product />} />
         </Routes>
       </SkeletonTheme>
     </>
