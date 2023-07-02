@@ -1,0 +1,88 @@
+@mixin mhmd($name) {
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@mixin animate($animation, $duration) {
+  animation: $animation $duration normal 0s 1 forwards;
+}
+*{
+  scroll-behavior: smooth;
+}
+
+.cart-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  .backdrop {
+    bottom: 0;
+    background-color: #000;
+    opacity: 0;
+    visibility: hidden;
+    cursor: pointer;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all 1s ease-in-out;
+
+    &.te {
+      visibility: visible;
+      opacity: 0.56;
+    }
+  }
+
+  .main-cart-content {
+    position: fixed;
+    z-index: 101;
+    top: 0;
+    bottom: 0;
+    max-width: 38rem;
+    width: 100%;
+    background: #fff;
+    right: 0;
+
+    &.x {
+      @include mhmd(meow) {
+        0% {
+          right: -50%;
+        }
+
+        100% {
+          right: 0%;
+        }
+
+      }
+
+      @include animate(meow, 1s);
+    }
+  }
+
+  .font-size-subheader {
+    font-size: 1rem;
+    line-height: 1.875rem;
+  }
+
+
+}
+
+.cart-modal .cart-item .cart-item--image {
+  min-height: 100px;
+  width: 96px;
+  background-position: 50%;
+  background-size: cover;
+}
+.cart-modal .main-cart-content .cart-footer {
+  border-top: 1px solid #000;
+  background: #f4fafb;
+  padding: 1.5rem
+}
+
+@media(min-width: 768px) {
+  .cart-modal .main-cart-content .cart-footer {
+      padding:1.5rem 3rem 2.5rem
+  }
+}

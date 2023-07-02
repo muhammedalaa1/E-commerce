@@ -1,0 +1,56 @@
+.product-sidebar {
+  display: flex;
+  top: 6.5rem;
+  min-width: 16rem;
+  position: sticky;
+  align-self: flex-start;
+  justify-content: space-between;
+}
+
+.product-images {
+  display: flex;
+  margin: 0 4rem;
+
+  .flex-1 {
+    flex-grow: 1 !important;
+  }
+
+
+
+
+  .product-detail {
+    position: sticky;
+    top: 6.5rem;
+    min-width: 24rem;
+    align-self: flex-start;
+  }
+}
+
+.font-family-secondary {
+  font-family: Playfair Display, serif;
+}
+
+@media (max-width: 992px) {
+  .main-product-content {
+    display: block;
+
+    .product-sidebar {
+      display: none;
+    }
+  }
+}
+
+
+.sizes:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+  border-radius: 50px;
+  transition: all 400ms ease 0s;
+}
+
+.custom-hover {
+  background-color: rgba(0, 0, 0, 0.14);
+  border-radius: 50px;
+
+}
+
+// rgba(0, 0, 0, 0.04)

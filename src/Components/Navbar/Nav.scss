@@ -1,0 +1,109 @@
+@import "./variables";
+
+
+.button {
+  background-color: $primary-color;
+}
+
+header {
+  .header {
+    padding: 1.5rem 3rem;
+    background-color: transparent;
+    transition: background-color .4s ease-in-out, border-color .2s ease-in-out, filter .01s linear .2s;
+  }
+
+  .scrolled {
+    background-color: #fff;
+    border-bottom: 1px solid black;
+    color: black;
+    transition: background-color .4s ease-in-out, border-color .4s ease-in-out, filter .01s linear .2s;
+  }
+
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #fcfcfc;
+}
+
+
+
+.menu-icon {
+  display: none;
+}
+
+
+.nav-elements ul {
+  display: none;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.nav-elements ul li:not(:last-child) {
+  margin-right: 60px;
+}
+
+.nav-elements ul a {
+  font-size: 16px;
+  font-weight: 400;
+  color: #2f234f;
+  text-decoration: none;
+}
+
+.nav-elements ul a.active {
+  color: #574c4c;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-elements ul a.active::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #574c4c;
+}
+
+@media (max-width: 768px) {
+  .nav-elements ul li:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav-elements {
+    position: absolute;
+    right: 0;
+    top: 85px;
+    background-color: #fff;
+    width: 0px;
+    height: calc(100vh - 60px);
+    transition: all 0.5s ease-in;
+    overflow: hidden;
+  }
+
+  .nav-elements.active {
+    width: 270px;
+  }
+
+  .nav-elements ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-elements ul li {
+    margin-top: 22px;
+    margin-left: 2rem;
+  }
+}

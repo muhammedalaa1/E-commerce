@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.font-size-display {
+  font-size: 4rem;
+  line-height: 4.5rem;
+  color: white;
+  font-family: Playfair Display, serif;
+}
+
+.font-size-display1 {
+  font-size: 1.75rem;
+  line-height: 2.5rem;
+}
+
+.font-size-display2 {
+  font-size: 2.125rem;
+  line-height: 3rem;
+}
+
+.font-size-display3 {
+  font-size: 2.5rem;
+  line-height: 3.5rem
+}
+
+.font-size-subheader {
+  font-size: 1rem;
+  line-height: 1.875rem
+}
+
+@media (min-width: 768px) {
+  .custom-image {
+    margin-left: 58.333333%;
+  }
+}
+
+.row {
+
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  margin-right: -8px;
+  margin-left: -8px;
+}
+
+.explore-banner .explore-banner--image {
+  background: url(https://commercejs-demo-store.netlify.app/images/explore-banner.png) 50%/cover;
+  padding-bottom: 100%;
+}
+
+@media(min-width: 768px) {
+  .explore-banner .explore-banner--image {
+    padding-bottom: 180%
+  }
+}
+
+@media(min-width: 992px) {
+  .explore-banner .explore-banner--image {
+    padding-bottom: 144%
+  }
+}
+
+@media(min-width: 1200px) {
+  .explore-banner .explore-banner--image {
+    padding-bottom: 112%
+  }
+}
+
+
+.hero-Slide {
+  min-height: 85vh;
+  background-size: cover;
+  background-position: 50%;
+
+
+
+  .hero-shadow {
+    text-shadow: 2px 2px 3px rgba(33, 33, 33, .5);
+    transition: all .3s ease-in-out;
+
+    &.flex.bg-transparent.text-white.border.border-white.px-12.h-14.items-center:hover {
+      background-color: rgba(255, 255, 255, .248) !important;
+    }
+  }
+
+  .text-xl {
+    line-height: 2rem;
+  }
+
+
+}
+
+
+
+
+
+.custom-container {
+  max-width: 1440px;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bg-brand {
+  background: #f4fafb !important;
+
+  .custom-container {
+    max-width: 1440px;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+
+
+
+    .font-family-secondary {
+      font-family: Playfair Display, serif;
+    }
+
+    .categories {
+      margin-right: -8px;
+      margin-left: -8px;
+    }
+  }
+}
+
+.facial {
+  background: url("./imgs/1.png") center center / cover;
+
+  width: 100%;
+}
+
+.hair {
+  background: url("./imgs/2.png") center center / cover;
+
+  width: 100%;
+}
+
+.body {
+  background: url("./imgs/3.png") center center / cover;
+
+  width: 100%;
+}
+
+.prd {
+  padding-bottom: 125%;
+}
+
+.collection-banner .collection-item-image {
+  padding-bottom: 80%;
+}
+
+
+@media (min-width: 768px) {
+  .collection-banner {
+    .collection-item-image {
+      padding-bottom: 140%;
+    }
+
+    .collection-item:nth-child(odd) {
+      margin-top: -3rem;
+    }
+
+
+  }
+}

@@ -1,0 +1,15 @@
+.button {
+  background-color: #007bff;
+}
+
+header .header {
+  padding: 1.5rem 3rem;
+  background-color: transparent;
+  transition: background-color 0.4s ease-in-out, border-color 0.2s ease-in-out, filter 0.01s linear 0.2s;
+}
+header .scrolled {
+  background-color: #fff;
+  border-bottom: 1px solid black;
+  color: black;
+  transition: background-color 0.4s ease-in-out, border-color 0.4s ease-in-out, filter 0.01s linear 0.2s;
+}/*# sourceMappingURL=Nav.css.map */
