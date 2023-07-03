@@ -188,8 +188,7 @@ const Footer = () => {
                 </Link>
               </div>
               <div className="text-lg py-6 text-right">
-                <p>&copy; 2023 Made By Muhammed Alaa &#10084; </p>
-                
+                <p>&copy; 2023 Made By Muhammed Alaa </p>
               </div>
             </div>
           </div>
