@@ -5,6 +5,8 @@
     max-width: 60%;
     margin-left: 40%;
   }
+
+  
 }
 
 .footer-follow .footer-follow--images {
@@ -44,6 +46,8 @@
   .footer-follow .footer-follow--images .follow-images:nth-child(3) {
     display: flex
   }
+
+
 }
 
 .footer-follow .footer-follow--images .follow-images:nth-child(4) {
@@ -70,7 +74,8 @@
 .sds {
   transform: translateY(-42px);
 }
-.github:hover{
+
+.github:hover {
   transition: all 0.4s;
   color: rgb(122, 122, 246);
 }

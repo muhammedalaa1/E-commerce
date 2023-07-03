@@ -187,7 +187,7 @@ const Footer = () => {
                   <LinkedInIcon className="github" />
                 </Link>
               </div>
-              <div className="text-lg py-6 text-right">
+              <div className="py-6 text-right font-size-caption text-sm md:text-lg">
                 <p>&copy; 2023 Made By Muhammed Alaa </p>
               </div>
             </div>
