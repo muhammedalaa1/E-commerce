@@ -32,6 +32,15 @@
   }
 }
 
+@media (max-width : 576px) {
+  .main-product-content .product-detail {
+    padding: 1.5rem 0 0;
+    min-width: 15rem;
+    
+  }
+
+}
+
 .font-family-secondary {
   font-family: Playfair Display, serif;
 }
