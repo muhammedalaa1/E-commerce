@@ -8,7 +8,7 @@ import Skeleton from "react-loading-skeleton";
 import { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import Login from "./Components/Login/Login";
-import Signup from "./Components/signup/signup";
+import Signup from "./Components/signup/Signup";
 import Checkout from "./Components/Checkout/Checkout";
 import Reciept from "./Components/Checkout/Reciept";
 function App() {
