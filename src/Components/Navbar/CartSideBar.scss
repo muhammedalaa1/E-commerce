@@ -7,7 +7,8 @@
 @mixin animate($animation, $duration) {
   animation: $animation $duration normal 0s 1 forwards;
 }
-*{
+
+* {
   scroll-behavior: smooth;
 }
 
@@ -75,6 +76,7 @@
   background-position: 50%;
   background-size: cover;
 }
+
 .cart-modal .main-cart-content .cart-footer {
   border-top: 1px solid #000;
   background: #f4fafb;
@@ -83,6 +85,18 @@
 
 @media(min-width: 768px) {
   .cart-modal .main-cart-content .cart-footer {
-      padding:1.5rem 3rem 2.5rem
+    padding: 1.5rem 3rem 2.5rem
   }
+}
+
+.check-out:hover {
+  background-color: white;
+  color: black;
+  transition: 1s ease-in-out;
+}
+
+.continue-shopping:hover {
+  background-color: black;
+  color: white;
+  transition: 1s ease-in-out;
 }

@@ -44,7 +44,7 @@ const product = (props) => {
     };
 
     fetchProduct();
-  }, []);
+  }, []); //fake use of api just for training
 
   const { totalQuantity, cartItems, setCartItems } = useCart();
   const handleCart = (product, redirect) => {
@@ -73,7 +73,6 @@ const product = (props) => {
     }
   };
 
-  if (!Object.keys(product).length > 0) return <div>Loading.....</div>;
 
   return (
     <>
@@ -242,7 +241,7 @@ const product = (props) => {
             </div>
             <Fragment>
               <Accordion open={open === 0}>
-                <AccordionHeader onClick={() => handleOpen(1)} clas>
+                <AccordionHeader onClick={() => handleOpen(1)}>
                   Shipping and returns
                 </AccordionHeader>
                 <AccordionBody>

@@ -7,6 +7,10 @@ import Product from "./Components/product/Product";
 import Skeleton from "react-loading-skeleton";
 import { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
+import Login from "./Components/Login/Login";
+import Signup from "./Components/signup/signup";
+import Checkout from "./Components/Checkout/Checkout";
+import Reciept from "./Components/Checkout/Reciept";
 function App() {
   return (
     <>
@@ -15,6 +19,10 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/Collection" element={<Collection />} />
           <Route path="/product/:id" element={<Product />} />
+          <Route path="/Login" element={<Login />} />
+          <Route path="/Signup" element={<Signup />} />
+          <Route path="/Checkout" element={<Checkout />} />
+          <Route path="/Reciept" element={<Reciept />} />
         </Routes>
       </SkeletonTheme>
     </>
