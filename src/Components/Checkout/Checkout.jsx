@@ -9,7 +9,7 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import TextField from "@mui/material/TextField";
-import "../Navbar/cartSideBar.scss";
+import "../Navbar/CartSideBar.scss";
 import useCart from "../../Hooks/Cart";
 
 const Checkout = () => {
