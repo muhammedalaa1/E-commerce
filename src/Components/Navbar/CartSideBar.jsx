@@ -135,10 +135,11 @@ const CartSideBar = ({ isCartOpen, setisCartOpen }) => {
                                 </button>
                               </div>
                               <DeleteIcon
-                                onClick={handleDelete(
+                                onClick={()=>handleDelete(
                                   cartItems[i],
                                   cartItems[i].size
                                 )}
+                                className="cursor-pointer"
                               ></DeleteIcon>
                             </div>
                           </div>
