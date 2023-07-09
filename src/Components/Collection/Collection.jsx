@@ -23,7 +23,7 @@ const Collection = () => {
                         <p className="mb-2 relative cursor-pointer font-medium text-xl">
                           Facial Products<sup>3</sup>
                         </p>
-                      </div>{" "}
+                      </div>
                     </a>
                   </li>
                   <li>
@@ -69,7 +69,7 @@ const Collection = () => {
                             className="mb-4 prd"
                             style={{
                               backgroundImage:
-                                'url("https://cdn.chec.io/merchants/17851/images/cdae2365eff5a961dd838b0505a1142b656efdf95f08c2785b59a|lips.jpg")',
+                                'url("../../../public/imgs/miss_rose_3d_fantastic_mineral_matte_lipstick__37_1506620679_19c9e4bc.jpg")',
                               backgroundPosition: "center center",
                               backgroundSize: "cover",
                             }}
@@ -77,7 +77,7 @@ const Collection = () => {
                           <Generate
                             tit="lip-fantastic"
                             id={1}
-                            img="https://cdn.chec.io/merchants/17851/images/cdae2365eff5a961dd838b0505a1142b656efdf95f08c2785b59a|lips.jpg"
+                            img="../../../public/imgs/miss_rose_3d_fantastic_mineral_matte_lipstick__37_1506620679_19c9e4bc.jpg"
                             desc="A limited-edition, nourishing lip gel to top off your look and feel fantastic."
                             pri="$24"
                             cat="facial"
@@ -93,7 +93,7 @@ const Collection = () => {
                             className="mb-4 prd"
                             style={{
                               backgroundImage:
-                                'url("https://cdn.chec.io/merchants/17851/images/c3cf1b72aaa232ba2ab495bd7485efe29cee138b5f08c2f945173|gel.jpg")',
+                                'url("../../../public/imgs/212901_q1tVTrQGZJhOQ3ua.jpg")',
                               backgroundPosition: "center center",
                               backgroundSize: "cover",
                             }}
@@ -101,7 +101,7 @@ const Collection = () => {
                           <Generate
                             tit="Eye Purity Gels"
                             id={2}
-                            img='url("https://cdn.chec.io/merchants/17851/images/c3cf1b72aaa232ba2ab495bd7485efe29cee138b5f08c2f945173|gel.jpg")'
+                            img='url("../../../public/imgs/212901_q1tVTrQGZJhOQ3ua.jpg")'
                             desc="Treat your skin with active pore enzymes that replenish sun damaged skin."
                             pri="$18"
                             cat="facial"

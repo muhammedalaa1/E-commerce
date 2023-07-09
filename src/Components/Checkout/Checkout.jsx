@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./Checkout.scss";
 import Nav from "../Navbar/Nav";
 import { COUNTRIES } from "./Country";
@@ -9,14 +10,16 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import TextField from "@mui/material/TextField";
+import DiscountIcon from "@mui/icons-material/Discount";
 import "../Navbar/CartSideBar.scss";
 import useCart from "../../Hooks/Cart";
 
 const Checkout = () => {
   const { cartItems } = useCart();
-  console.log(cartItems);
-  const [buttonText, setButtonText] = useState("Submit");
+  // console.log(cartItems);
+  const [buttonText, setButtonText] = useState("Make Payment");
   const [isActive, setIsActive] = useState(false);
+  const [Coupon, setCoupon] = useState({ coupon: "", flag: "" });
 
   const [shipmentMethod, setShipmentMethod] = useState("");
   const [country, setCountry] = useState("");
@@ -128,10 +131,54 @@ const Checkout = () => {
       [name]: value,
     }));
   };
+  const handleCouponChange = (e) => {
+    const { name, value } = e.target;
+    setCoupon((prevCoupon) => ({ ...prevCoupon, [name]: value }));
+    console.log(Coupon);
+  };
+  const handleCoupon = () => {
+    if (Coupon.coupon === "TestDiscount") {
+      setCoupon((prevCoupon) => ({ ...prevCoupon, ["flag"]: "true" }));
+      return true;
+    } else {
+      setCoupon((prevCoupon) => ({ ...prevCoupon, ["flag"]: "false" }));
+      return false;
+    }
+  };
 
-  useEffect(() => {
-    console.log(info);
-  }, [info]);
+  const calculateTotal = () => {
+    var total = 0;
+    cartItems.map((item, i) => {
+      if (cartItems[i].size > cartItems[i].size1) {
+        total +=
+          parseFloat(cartItems[i].quantity) * parseFloat(cartItems[i].pri * 2);
+      } else {
+        total +=
+          parseFloat(cartItems[i].quantity) * parseFloat(cartItems[i].pri);
+      }
+    });
+    console.log(parseFloat(total).toFixed(2));
+    return total;
+  };
+  const calculateDiscount = () => {
+    let total = calculateTotal();
+    total *= 0.1;
+    return parseFloat(total.toFixed(2));
+  };
+
+  const calculateTotalAmount = () => {
+    var total = 0;
+    total += calculateTotal();
+    console.log(total);
+    if (Coupon.flag === "true") {
+      total -= calculateDiscount();
+    }
+    console.log(total);
+    if (info.shipmentMethod === "World Wide") {
+      total += 5;
+    }
+    return total;
+  };
 
   return (
     <>
@@ -407,15 +454,15 @@ const Checkout = () => {
               </button>
             </form>
           </div>
-          <div className="w-full md:w-10/12 lg:w-5/12 md:ml-4 lg:mt-0 mt-4 px-2">
+          <div className="w-full md:w-10/12 lg:w-5/12 offset-md-1 lg:mt-0 mt-4 px-2">
             <div className="checkout-summary lg:p-12 p-4">
               <div className="border-b text-xl border-gray-400 font-medium">
                 Your order
               </div>
 
-              {cartItems.map((product) => {
+              {cartItems.map((product, key) => {
                 return (
-                  <div className="pt-4 border-b border-gray-400">
+                  <div className="pt-4 border-b border-gray-400" key={key}>
                     <div className="flex mb-2">
                       <img
                         src={product.img}
@@ -424,7 +471,12 @@ const Checkout = () => {
                       />
                       <div className="flex flex-grow ">
                         <div className="flex-grow">
-                          <p className="font-medium ">{product.title}</p>
+                          <Link
+                            to={`/product/${product.id}`}
+                            className="text-blue-400 underline"
+                          >
+                            <p className="font-medium ">{product.title}</p>
+                          </Link>
                           <p className="font-light ">
                             Quantity: {product.quantity}
                           </p>
@@ -432,12 +484,78 @@ const Checkout = () => {
                         </div>
                       </div>
                       <div className="text-right font-semibold">
-                        ${product.pri}.00
+                        $
+                        {product.size > product.size1
+                          ? product.pri * 2
+                          : product.pri}
+                        .00
                       </div>
                     </div>
                   </div>
                 );
               })}
+              <div className="row py-4  relative ">
+                <input
+                  type="text"
+                  placeholder="Gift card or discount code"
+                  className="mr-2 w-full basis-0 flex-grow"
+                  value={Coupon.coupon}
+                  name="coupon"
+                  onChange={handleCouponChange}
+                />
+                <button
+                  className="text-white border-none font-medium px-6 relative w-auto max-w-full bg-black"
+                  type="submit"
+                  onClick={() => handleCoupon()}
+                >
+                  Apply
+                </button>
+              </div>
+              <div
+                className={`mb-4 bg-red-500 text-center p-2 rounded-lg transition-all ${
+                  Coupon.flag === "false" ? "opacity-100" : "opacity-0 hidden"
+                }`}
+              >
+                Enter a correct coupon
+              </div>
+
+              <div className="discount border-b border-gray-400 w-full text-sm p-2 ">
+                <DiscountIcon className="text-black mr-2" />
+                Hurry You got a discount use the coupon below :
+                <div className="text-center text-black text-lg ">
+                  TestDiscount
+                </div>
+              </div>
+              <div className="py-4 border-b border-black">
+                <div className="flex justify-between items-center mb-2">
+                  <p>SubTotal</p>
+                  <p className="text-right font-medium">
+                    ${calculateTotal().toFixed(2)}
+                  </p>
+                </div>
+                <div className="flex justify-between items-center mb-2">
+                  <p>Shipping</p>
+                  <p className="text-right font-medium">
+                    ${`${shipmentMethod !== "World Wide" ? 0 : 5}`}.00
+                  </p>
+                </div>
+                <div className="flex justify-between items-center mb-2">
+                  <p>Discount</p>
+                  <p className="text-right font-medium">
+                    {Coupon.flag !== "true"
+                      ? "No coupon code applied"
+                      : `$${calculateDiscount()}`}
+                  </p>
+                </div>
+              </div>
+              <div className="text-2xl flex justify-between">
+                <p className="font-family-secondary font-semibold">
+                  Total amount
+                </p>
+                <p className="font-serif font-semibold">
+                  ${calculateTotalAmount()}
+                </p>
+              </div>
             </div>
           </div>
         </div>

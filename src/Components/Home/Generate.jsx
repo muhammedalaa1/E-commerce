@@ -76,7 +76,7 @@ const Generate = (props) => {
       {productData ? (
         <div>
           <p className="font-size-subheader mb-2 font-medium ">
-            {props.title}
+            {props.tit}
           </p>
           <p className="text-gray-600 mb-2">{props.desc}</p>
           <p className="font-size-subheader font-medium pb-2 border-b border-b-black">

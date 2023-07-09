@@ -69,3 +69,22 @@ button.submit {
     transition-delay: 1s;
   }
 }
+
+@media (min-width: 768px) {
+  .offset-md-1 {
+    margin-left: 8.333333%;
+  }
+}
+
+.discount {
+  color: rgb(56, 174, 4);
+  background-color: rgb(228, 247, 219);
+  border-radius: 3px;
+  border: 1px solid;
+}
+
+.checkout-summary {
+  top: 15%;
+  position: sticky;
+  background: #f7fbfd !important;
+}

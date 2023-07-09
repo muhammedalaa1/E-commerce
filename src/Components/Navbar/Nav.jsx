@@ -99,7 +99,7 @@ const Nav = ({ addClass }) => {
               <NavLink to="/Collection">Shop</NavLink>
             </li>
             <li>
-              <a href="/#contact">Conatct</a>
+              <a href="/#contact">Contact</a>
             </li>
           </ul>
         </div>
