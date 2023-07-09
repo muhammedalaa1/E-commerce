@@ -69,7 +69,7 @@ const Collection = () => {
                             className="mb-4 prd"
                             style={{
                               backgroundImage:
-                                'url("../../../public/imgs/miss_rose_3d_fantastic_mineral_matte_lipstick__37_1506620679_19c9e4bc.jpg")',
+                                'url("../../.././imgs/miss_rose_3d_fantastic_mineral_matte_lipstick__37_1506620679_19c9e4bc.jpg")',
                               backgroundPosition: "center center",
                               backgroundSize: "cover",
                             }}
@@ -77,7 +77,7 @@ const Collection = () => {
                           <Generate
                             tit="lip-fantastic"
                             id={1}
-                            img="../../../public/imgs/miss_rose_3d_fantastic_mineral_matte_lipstick__37_1506620679_19c9e4bc.jpg"
+                            img="../../.././imgs/miss_rose_3d_fantastic_mineral_matte_lipstick__37_1506620679_19c9e4bc.jpg"
                             desc="A limited-edition, nourishing lip gel to top off your look and feel fantastic."
                             pri="$24"
                             cat="facial"
@@ -93,7 +93,7 @@ const Collection = () => {
                             className="mb-4 prd"
                             style={{
                               backgroundImage:
-                                'url("../../../public/imgs/212901_q1tVTrQGZJhOQ3ua.jpg")',
+                                'url("../../.././imgs/212901_q1tVTrQGZJhOQ3ua.jpg")',
                               backgroundPosition: "center center",
                               backgroundSize: "cover",
                             }}
@@ -101,7 +101,7 @@ const Collection = () => {
                           <Generate
                             tit="Eye Purity Gels"
                             id={2}
-                            img='url("../../../public/imgs/212901_q1tVTrQGZJhOQ3ua.jpg")'
+                            img='url("../../.././imgs/212901_q1tVTrQGZJhOQ3ua.jpg")'
                             desc="Treat your skin with active pore enzymes that replenish sun damaged skin."
                             pri="$18"
                             cat="facial"
