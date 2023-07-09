@@ -189,8 +189,7 @@ const Home = () => {
                 <div
                   className="mb-4 prd"
                   style={{
-                    backgroundImage:
-                      'url("../../.././imgs/Perfect Cover BB Cream SPF 42 PA+++.png")',
+                    backgroundImage: 'url("../../.././imgs/Complexion.png")',
                     backgroundPosition: "center center",
                     backgroundSize: "cover",
                   }}
@@ -198,7 +197,7 @@ const Home = () => {
                 <Generate
                   tit="Complexion Cream"
                   id={3}
-                  img="../../.././imgs/Perfect Cover BB Cream SPF 42 PA+++.png"
+                  img="../../.././imgs/Complexion.png"
                   desc="Anti-aging complexion cream for medium to dry skin. Nourish your face with a natural vitamin burst for that perfectly balanced glow."
                   pri="$32.00"
                   cat="facial"
