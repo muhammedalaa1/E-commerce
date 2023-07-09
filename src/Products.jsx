@@ -32,8 +32,8 @@ export const customProducts = [
   {
     id: "3",
     title: "Complexion Cream",
-    img: ".././imgs/Perfect Cover BB Cream SPF 42 PA+++.png",
-    img1: ".././imgs/Perfect Cover BB Cream SPF 42 PA+++.png",
+    img: "../public/imgs/Complexion.png",
+    img1: "../public/imgs/Complexion.png",
     img2: "https://cdn.chec.io/merchants/17851/assets/QoZTzBZBq5pOlfS4%7Ccream-2.jpg",
     img3: "",
     description:
