@@ -47,7 +47,11 @@ export const CartProvider = ({ children }) => {
     );
     if (isProductExist) {
       const updatedCart = cartItems.map((item) => {
-        if (item.id === product.id && item.size === size) {
+        if (
+          item.id === product.id &&
+          item.size === size &&
+          item.quantity < 30
+        ) {
           return {
             ...item,
             quantity: item.quantity + 1,

@@ -108,10 +108,7 @@ const CartSideBar = ({ isCartOpen, setisCartOpen }) => {
                                     )
                                   }
                                 >
-                                  <img
-                                    src="../../.././imgs/minus.svg"
-                                    alt=""
-                                  />
+                                  <img src="../../.././imgs/minus.svg" alt="" />
                                 </button>
                                 <p className="text-center px-4">
                                   {cartItems[i].quantity}
@@ -125,10 +122,7 @@ const CartSideBar = ({ isCartOpen, setisCartOpen }) => {
                                     )
                                   }
                                 >
-                                  <img
-                                    src="../../.././imgs/plus.svg"
-                                    alt=""
-                                  />
+                                  <img src="../../.././imgs/plus.svg" alt="" />
                                 </button>
                               </div>
                               <DeleteIcon
@@ -138,6 +132,13 @@ const CartSideBar = ({ isCartOpen, setisCartOpen }) => {
                                 className="cursor-pointer"
                               ></DeleteIcon>
                             </div>
+                            <p
+                              className={`text-red-900 transition-all ${
+                                cartItems[i].quantity === 30 ? "opacity-100" : "opacity-0"
+                              }`}
+                            >
+                              Max limit reached
+                            </p>
                           </div>
                         </div>
                       </div>
