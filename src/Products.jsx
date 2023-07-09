@@ -2,10 +2,10 @@ export const customProducts = [
   {
     id: "1",
     title: "Lip Fantastic",
-    img: "../public/imgs/miss_rose_3d_fantastic_mineral_matte_lipstick__37_1506620679_19c9e4bc.jpg",
-    img1: "../public/imgs/miss_rose_3d_fantastic_mineral_matte_lipstick__37_1506620679_19c9e4bc.jpg",
-    img2: "../public/imgs/miss_rose_3d_fantastic_mineral_matte_lipstick__37_1506620679_3ce20c9d.jpg",
-    img3: "../public/imgs/_lancome_lipstick_shade_03__13_1688283909_070d252f_progressive.jpg",
+    img: ".././imgs/miss_rose_3d_fantastic_mineral_matte_lipstick__37_1506620679_19c9e4bc.jpg",
+    img1: ".././imgs/miss_rose_3d_fantastic_mineral_matte_lipstick__37_1506620679_19c9e4bc.jpg",
+    img2: ".././imgs/miss_rose_3d_fantastic_mineral_matte_lipstick__37_1506620679_3ce20c9d.jpg",
+    img3: ".././imgs/_lancome_lipstick_shade_03__13_1688283909_070d252f_progressive.jpg",
     description:
       "A limited-edition, nourishing lip gel to top off your look and feel fantastic.",
     pri: 24.0,
@@ -17,7 +17,7 @@ export const customProducts = [
   {
     id: "2",
     title: "Eye Purity Gels",
-    img: "../public/imgs/212901_q1tVTrQGZJhOQ3ua.jpg",
+    img: ".././imgs/212901_q1tVTrQGZJhOQ3ua.jpg",
     img1: "",
     img2: "https://qvc.scene7.com/is/image/QVC/a/49/a309349.001?$aempdlarge$",
     img3: "https://www.naimies.com/media/catalog/product/cache/df4d6ab77e3c9593d62f9004fba54da5/2/1/212901_q1tVTrQGZJhOQ3ua.jpg",
