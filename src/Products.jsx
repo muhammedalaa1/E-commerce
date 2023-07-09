@@ -32,10 +32,10 @@ export const customProducts = [
   {
     id: "3",
     title: "Complexion Cream",
-    img: "https://cdn.chec.io/merchants/17851/images/bf9cf6844f6febb697cbba7dcbbc048abc6c1cea5f08c2e616a7c|cream.jpg",
-    img1: "https://cdn.chec.io/merchants/17851/images/bf9cf6844f6febb697cbba7dcbbc048abc6c1cea5f08c2e616a7c|cream.jpg",
+    img: ".././imgs/Perfect Cover BB Cream SPF 42 PA+++.png",
+    img1: ".././imgs/Perfect Cover BB Cream SPF 42 PA+++.png",
     img2: "https://cdn.chec.io/merchants/17851/assets/QoZTzBZBq5pOlfS4%7Ccream-2.jpg",
-    img3: "https://cdn.chec.io/merchants/17851/assets/ISau419S4nHgwkVB|cream-3.jpg",
+    img3: "",
     description:
       "Anti-aging complexion cream for medium to dry skin. Nourish your face with a natural vitamin burst for that perfectly balanced glow.",
     pri: 32.0,
@@ -49,8 +49,8 @@ export const customProducts = [
     title: "Hair Beauty Bath",
     img: "https://cdn.chec.io/merchants/17851/images/b115a9b1e7206e735653a4a9a38f429ccca4186c5f08c293d7a5b|hair-beauty.jpg",
     img1: "https://cdn.chec.io/merchants/17851/images/b115a9b1e7206e735653a4a9a38f429ccca4186c5f08c293d7a5b|hair-beauty.jpg",
-    img2: "https://cdn.chec.io/merchants/17851/assets/A3uuvpHj9F6j1zKN|hair-beauty-2.jpg",
-    img3: "https://cdn.chec.io/merchants/17851/assets/arYtw8sGqGa7P61U|hair-beauty-3.jpg",
+    img2: ".././imgs/Ouai hair products 🚿.png",
+    img3: ".././imgs/The OUAI To Cleaner Hair — Emily Whitcomb.png",
     description:
       "Made for your hair, a bath foam that brings your hair back to life.",
     pri: 25.0,
@@ -63,9 +63,9 @@ export const customProducts = [
     id: "5",
     title: "Shampoo & Conditioner Set",
     img: "https://cdn.chec.io/merchants/17851/images/e62bac70e3f29684c06bc36574c48d6afc5629ae5f08c2afc54bf|hair-set.jpg",
-    img1: "https://cdn.chec.io/merchants/17851/assets/XQfbKI4c9gwrsr6g%7Chair-set-2.jpg",
+    img1: ".././imgs/GRO Revitalizing Shampoo and Conditioner Kit.png",
     img2: "https://cdn.chec.io/merchants/17851/images/e62bac70e3f29684c06bc36574c48d6afc5629ae5f08c2afc54bf%7Chair-set.jpg",
-    img3: "https://cdn.chec.io/merchants/17851/assets/HHlFJIwkwvEOemWY%7Chair-set-3.jpg",
+    img3: "../public/imgs/lookfantastic International.png",
     description:
       "Weightless, color safe, and cleansing Verb Ghost shampoo and conditioner set.",
     pri: 65.0,
@@ -79,8 +79,8 @@ export const customProducts = [
     title: "Rose Hair & Body Oil",
     img: "https://cdn.chec.io/merchants/17851/images/3019e70937032bb24ec27722b9b896f12531a5875f08c2cd13714|hair-oil.jpg",
     img1: "https://cdn.chec.io/merchants/17851/images/3019e70937032bb24ec27722b9b896f12531a5875f08c2cd13714|hair-oil.jpg",
-    img2: "https://cdn.chec.io/merchants/17851/assets/IQccguFwVEdgr3tv|hair-oil-2.jpg",
-    img3: "https://cdn.chec.io/merchants/17851/assets/Xz7dO1foIL5cX9Oj|hair-oil-3.jpg",
+    img2: ".././imgs/Om Organics.png",
+    img3: ".././imgs/13 Reasons Why You Should Be Using Jojoba Oil Every Day.png",
     description:
       "A multitasking oil for hair and body that’s perfect for those on the go.",
     pri: 38.0,
@@ -92,10 +92,10 @@ export const customProducts = [
   {
     id: "7",
     title: "Face & Body Roller",
-    img: "https://cdn.chec.io/merchants/17851/images/a690732c1c5b93cfea68e82e43d488defb4e95b55f08c1d35daaf|roller.jpg",
-    img1: "https://cdn.chec.io/merchants/17851/images/a690732c1c5b93cfea68e82e43d488defb4e95b55f08c1d35daaf|roller.jpg",
-    img2: "https://cdn.chec.io/merchants/17851/assets/wXlES92euFxsMFkY|roller-2.jpg",
-    img3: "https://cdn.chec.io/merchants/17851/assets/F1t7AVOogO3VZoxE|roller-3.jpg",
+    img: ".././imgs/Jade Face Rollers - What Do They Really Do_.png",
+    img1: ".././imgs/Jade Face Rollers - What Do They Really Do_.png",
+    img2: ".././imgs/My new Jade Roller.png",
+    img3: ".././imgs/SEA SUN AUSTRALIA.png",
     description:
       "Enrich your morning and evening beauty ritual and to help reduce the appearance of puffiness and wrinkles.",
     pri: 18.0,
@@ -109,8 +109,8 @@ export const customProducts = [
     title: "Cure Srub Kit",
     img: "https://cdn.chec.io/merchants/17851/images/19e486f3eabbc47e5b6c8c590b38a83c3832e88e5f08c2019b039|scrub.jpg",
     img1: "https://cdn.chec.io/merchants/17851/images/19e486f3eabbc47e5b6c8c590b38a83c3832e88e5f08c2019b039|scrub.jpg",
-    img2: "https://cdn.chec.io/merchants/17851/assets/hLCTYTl6kSO2c4Wb|scrub-2.jpg",
-    img3: "https://cdn.chec.io/merchants/17851/assets/cCjV2vwHtExIPZbv|scrub-3.jpg",
+    img2: ".././imgs/Bath Shower Scrub Exfoliator Exfoliante Exfoliating Sisal Bamboo Wooden Body Brush Horsehair Dry Brush - Buy Dry Brush,Dry Brush With Handle,Body Brush Product on Alibaba_com.png",
+    img3: ".././imgs/New Beauty & Wellness Products.png",
     description:
       "Cleanse and rejuvenate your skin with bamboo bristle scrubbing brushes.",
     pri: 51.0,

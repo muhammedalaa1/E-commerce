@@ -61,10 +61,7 @@ const CartSideBar = ({ isCartOpen, setisCartOpen }) => {
                   className="bg-transparent p-0"
                   onClick={handelCartClose}
                 >
-                  <img
-                    src="https://commercejs-demo-store.netlify.app/icon/cross.svg"
-                    alt=""
-                  />
+                  <img src="../../.././imgs/cross.svg" alt="" />
                 </button>
               </div>
             </div>
@@ -112,7 +109,7 @@ const CartSideBar = ({ isCartOpen, setisCartOpen }) => {
                                   }
                                 >
                                   <img
-                                    src="https://commercejs-demo-store.netlify.app/icon/minus.svg"
+                                    src="../../.././imgs/minus.svg"
                                     alt=""
                                   />
                                 </button>
@@ -129,16 +126,15 @@ const CartSideBar = ({ isCartOpen, setisCartOpen }) => {
                                   }
                                 >
                                   <img
-                                    src="https://commercejs-demo-store.netlify.app/icon/plus.svg"
+                                    src="../../.././imgs/plus.svg"
                                     alt=""
                                   />
                                 </button>
                               </div>
                               <DeleteIcon
-                                onClick={()=>handleDelete(
-                                  cartItems[i],
-                                  cartItems[i].size
-                                )}
+                                onClick={() =>
+                                  handleDelete(cartItems[i], cartItems[i].size)
+                                }
                                 className="cursor-pointer"
                               ></DeleteIcon>
                             </div>

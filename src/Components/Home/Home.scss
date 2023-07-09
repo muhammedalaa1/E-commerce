@@ -44,8 +44,8 @@
 }
 
 .explore-banner .explore-banner--image {
-  background: url(https://commercejs-demo-store.netlify.app/images/explore-banner.png) 50%/cover;
-  padding-bottom: 100%;
+  background: url("../../.././imgs/banner.jpg") 50%/cover;
+  padding-bottom: 80%;
 }
 
 @media(min-width: 768px) {
@@ -56,13 +56,13 @@
 
 @media(min-width: 992px) {
   .explore-banner .explore-banner--image {
-    padding-bottom: 144%
+    padding-bottom: 100%;
   }
 }
 
 @media(min-width: 1200px) {
   .explore-banner .explore-banner--image {
-    padding-bottom: 112%
+    padding-bottom: 100%
   }
 }
 
@@ -126,7 +126,7 @@
 }
 
 .facial {
-  background: url("./imgs/1.png") center center / cover;
+  background: url("../../.././imgs/Palermo\ Body\ Vitamin\ C\ Facial\ Mask.png") center center / cover;
 
   width: 100%;
 }

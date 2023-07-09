@@ -190,7 +190,7 @@ const Home = () => {
                   className="mb-4 prd"
                   style={{
                     backgroundImage:
-                      'url("https://cdn.chec.io/merchants/17851/images/bf9cf6844f6febb697cbba7dcbbc048abc6c1cea5f08c2e616a7c|cream.jpg")',
+                      'url("../../.././imgs/Perfect Cover BB Cream SPF 42 PA+++.png")',
                     backgroundPosition: "center center",
                     backgroundSize: "cover",
                   }}
@@ -198,7 +198,7 @@ const Home = () => {
                 <Generate
                   tit="Complexion Cream"
                   id={3}
-                  img="https://cdn.chec.io/merchants/17851/images/bf9cf6844f6febb697cbba7dcbbc048abc6c1cea5f08c2e616a7c|cream.jpg"
+                  img="../../.././imgs/Perfect Cover BB Cream SPF 42 PA+++.png"
                   desc="Anti-aging complexion cream for medium to dry skin. Nourish your face with a natural vitamin burst for that perfectly balanced glow."
                   pri="$32.00"
                   cat="facial"

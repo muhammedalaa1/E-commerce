@@ -34,7 +34,7 @@ const Footer = () => {
                   style={{
                     paddingBottom: "100%",
                     backgroundImage:
-                      'url("https://commercejs-demo-store.netlify.app/images/insta/1.png")',
+                      'url("../.././imgs/Palermo Body Vitamin C Facial Mask.png")',
                     backgroundPosition: "center center",
                     backgroundSize: "cover",
                   }}
@@ -47,7 +47,7 @@ const Footer = () => {
                   style={{
                     paddingBottom: "100%",
                     backgroundImage:
-                      'url("https://commercejs-demo-store.netlify.app/images/insta/2.jpg")',
+                      'url("../.././imgs/insta2.png")',
                     backgroundPosition: "center center",
                     backgroundSize: "cover",
                     transform: "translateY(62px)",

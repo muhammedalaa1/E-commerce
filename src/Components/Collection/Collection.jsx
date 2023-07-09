@@ -117,7 +117,7 @@ const Collection = () => {
                             className="mb-4 prd"
                             style={{
                               backgroundImage:
-                                'url("https://cdn.chec.io/merchants/17851/images/bf9cf6844f6febb697cbba7dcbbc048abc6c1cea5f08c2e616a7c|cream.jpg")',
+                                'url("../../.././imgs/Perfect Cover BB Cream SPF 42 PA+++.png")',
                               backgroundPosition: "center center",
                               backgroundSize: "cover",
                             }}
@@ -125,7 +125,7 @@ const Collection = () => {
                           <Generate
                             tit="Complexion Cream"
                             id={3}
-                            img="https://cdn.chec.io/merchants/17851/images/bf9cf6844f6febb697cbba7dcbbc048abc6c1cea5f08c2e616a7c|cream.jpg"
+                            img="../../.././imgs/Perfect Cover BB Cream SPF 42 PA+++.png"
                             desc="Anti-aging complexion cream for medium to dry skin. Nourish your face with a natural vitamin burst for that perfectly balanced glow."
                             pri="$32"
                             cat="facial"
@@ -223,7 +223,7 @@ const Collection = () => {
                             className="mb-4 prd"
                             style={{
                               backgroundImage:
-                                'url("https://cdn.chec.io/merchants/17851/images/a690732c1c5b93cfea68e82e43d488defb4e95b55f08c1d35daaf|roller.jpg")',
+                                'url("../../.././imgs/Jade Face Rollers - What Do They Really Do_.png")',
                               backgroundPosition: "center center",
                               backgroundSize: "cover",
                             }}
@@ -231,7 +231,7 @@ const Collection = () => {
                           <Generate
                             tit="Face & Body Roller"
                             id={1}
-                            img="https://cdn.chec.io/merchants/17851/images/a690732c1c5b93cfea68e82e43d488defb4e95b55f08c1d35daaf|roller.jpg"
+                            img="../../.././imgs/Jade Face Rollers - What Do They Really Do_.png"
                             desc="Enrich your morning and evening beauty ritual and to help reduce the appearance of puffiness and wrinkles."
                             pri="$18"
                             cat="body"
