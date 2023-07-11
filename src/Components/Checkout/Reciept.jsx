@@ -29,7 +29,7 @@ const Reciept = ({ info }) => {
   };
   useEffect(() => {
     if (cartItems.length === 0) {
-      // navigate("/", { replace: true });
+      navigate("/", { replace: true });
     }
 
     return () => {
