@@ -8,8 +8,13 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import product from "../product/Product";
 
 const CartSideBar = ({ isCartOpen, setisCartOpen }) => {
-  const { cartItems, handleDecrease, handleIncrease, handleCartDelete } =
-    useCart();
+  const {
+    cartItems,
+    handleDecrease,
+    handleIncrease,
+    handleCartDelete,
+    handleClear,
+  } = useCart();
   const handleItemDecrease = (product, size) => {
     handleDecrease(product, size);
     // Perform any additional logic or actions
@@ -21,7 +26,9 @@ const CartSideBar = ({ isCartOpen, setisCartOpen }) => {
   const handleDelete = (product, size) => {
     handleCartDelete(product, size);
   };
-
+  const handleClearStorage = () => {
+    handleClear();
+  };
   const calculateTotal = () => {
     var x = 0;
     var f = 0;
@@ -134,7 +141,9 @@ const CartSideBar = ({ isCartOpen, setisCartOpen }) => {
                             </div>
                             <p
                               className={`text-red-900 transition-all ${
-                                cartItems[i].quantity === 30 ? "opacity-100" : "opacity-0"
+                                cartItems[i].quantity === 30
+                                  ? "opacity-100"
+                                  : "opacity-0"
                               }`}
                             >
                               Max limit reached

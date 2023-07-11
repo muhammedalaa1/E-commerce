@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Checkout.scss";
 import Nav from "../Navbar/Nav";
 import { COUNTRIES } from "./Country";
@@ -14,29 +14,20 @@ import DiscountIcon from "@mui/icons-material/Discount";
 import "../Navbar/CartSideBar.scss";
 import useCart from "../../Hooks/Cart";
 
-const Checkout = () => {
-  const { cartItems } = useCart();
+const Checkout = ({ info, setInfo }) => {
+  const { cartItems, addToOrders } = useCart();
+  console.log(info.firstName);
   // console.log(cartItems);
+  const obj = { test: "" };
+  console.log(obj.test);
+  const navigate = useNavigate();
   const [buttonText, setButtonText] = useState("Make Payment");
   const [isActive, setIsActive] = useState(false);
   const [Coupon, setCoupon] = useState({ coupon: "", flag: "" });
 
   const [shipmentMethod, setShipmentMethod] = useState("");
   const [country, setCountry] = useState("");
-  const [info, setInfo] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    fullName: "",
-    country: "",
-    city: "",
-    addressLine1: "",
-    cardNumber: "",
-    cvv: "",
-    expMonth: "",
-    expYear: "",
-    shipmentMethod: "",
-  });
+
   const isFormValid = () => {
     if (
       info.firstName.trim() === "" ||
@@ -63,8 +54,11 @@ const Checkout = () => {
       element.preventDefault();
       setButtonText("Thanks");
       setIsActive(true);
+      console.log(info);
+      // localStorage.setItem("info", JSON.stringify({ info }));
+
       setTimeout(() => {
-        window.location.href = "/Reciept";
+        navigate("/Reciept");
       }, 2000);
     }
   };
@@ -107,6 +101,9 @@ const Checkout = () => {
       [name]: value,
     }));
   };
+  
+  
+  
   const handleInputChange = (event) => {
     const { name, value } = event.target;
 
@@ -134,7 +131,7 @@ const Checkout = () => {
   const handleCouponChange = (e) => {
     const { name, value } = e.target;
     setCoupon((prevCoupon) => ({ ...prevCoupon, [name]: value }));
-    console.log(Coupon);
+    // console.log(Coupon);
   };
   const handleCoupon = () => {
     if (Coupon.coupon === "TestDiscount") {
@@ -157,7 +154,7 @@ const Checkout = () => {
           parseFloat(cartItems[i].quantity) * parseFloat(cartItems[i].pri);
       }
     });
-    console.log(parseFloat(total).toFixed(2));
+    // console.log(parseFloat(total).toFixed(2));
     return total;
   };
   const calculateDiscount = () => {
@@ -169,11 +166,11 @@ const Checkout = () => {
   const calculateTotalAmount = () => {
     var total = 0;
     total += calculateTotal();
-    console.log(total);
+    // console.log(total);
     if (Coupon.flag === "true") {
       total -= calculateDiscount();
     }
-    console.log(total);
+    // console.log(total);
     if (info.shipmentMethod === "World Wide") {
       total += 5;
     }

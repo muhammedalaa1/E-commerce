@@ -24,6 +24,10 @@ function useStorageFn(key, defaultValue, storageObject) {
   const remove = useCallback(() => {
     setValue(undefined);
   }, []);
+  const clear = useCallback(() => {
+    storageObject.removeItem(key);
+    setValue(defaultValue);
+  }, [key, defaultValue, storageObject]);
 
-  return { value, set: setValue, remove };
+  return { value, set: setValue, remove, clear };
 }

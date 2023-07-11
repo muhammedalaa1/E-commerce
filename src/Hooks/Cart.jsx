@@ -1,19 +1,36 @@
-import {
-  createContext,
-  useContext,
-  useLayoutEffect,
-  useState,
-  useCallback,
-} from "react";
+import { createContext, useContext, useLayoutEffect, useState } from "react";
 import useStorage from "./useStorage";
-import product from "../Components/product/Product";
 
 export const Context = createContext();
 
 export const CartProvider = ({ children }) => {
-  const { value: cartItems, set: setCartItems } = useStorage("cart", []);
+  const { value: cartItems, set: setCartItems, clear } = useStorage("cart", []);
+  const { value: orders, set: setOrders } = useStorage("orders", []);
   const [totalQuantity, setTotalQuantity] = useState(0);
 
+  //clear cartItems;
+  const handleClear = () => {
+    clear();
+  };
+
+  //generate order num
+  function generateOrderNumber() {
+    const randomNumber = Math.floor(Math.random() * 1000000);
+    const paddedNumber = randomNumber.toString().padStart(6, "0");
+    const orderNumber = `ORDER-${paddedNumber}`;
+    return orderNumber;
+  }
+
+  //function to add order in local storage
+  const addToOrders = (items) => {
+    if (cartItems) {
+      const orderNumber = generateOrderNumber(); // Replace this with your own logic to generate order numbers
+      const order = { ...items, orderNumber };
+      setOrders((prevOrders) => [...prevOrders, order]);
+    }
+  };
+
+  //decrease items in cart
   const handleDecrease = (product, size) => {
     const isProductExist = cartItems.find(
       (item) => item.id === product.id && item.size === size
@@ -33,12 +50,16 @@ export const CartProvider = ({ children }) => {
       }
     }
   };
+
+  //remove item from cart
   const handleCartDelete = (product, size) => {
     const updatedCart = cartItems.filter(
       (item) => item.id !== product.id || item.size !== size
     );
     setCartItems(updatedCart);
   };
+
+  //increase item in cart
   const handleIncrease = (product, size) => {
     console.log(cartItems);
 
@@ -62,6 +83,8 @@ export const CartProvider = ({ children }) => {
       setCartItems(updatedCart);
     }
   };
+
+  //total quantity
   const getTotalQuantity = (v = null) => {
     return (v ? v : cartItems).reduce((sum, item) => sum + item.quantity, 0);
   };
@@ -78,10 +101,13 @@ export const CartProvider = ({ children }) => {
         handleIncrease,
         handleDecrease,
         handleCartDelete,
+        handleClear,
         setCartItems: (v) => {
           setCartItems(v);
           setTotalQuantity(getTotalQuantity(v));
         },
+        orders,
+        addToOrders,
       }}
     >
       {children}

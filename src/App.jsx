@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Collection from "./Components/Collection/Collection";
@@ -12,6 +12,20 @@ import Signup from "./Components/signup/Signup";
 import Checkout from "./Components/Checkout/Checkout";
 import Reciept from "./Components/Checkout/Reciept";
 function App() {
+  const [info, setInfo] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    fullName: "",
+    country: "",
+    city: "",
+    addressLine1: "",
+    cardNumber: "",
+    cvv: "",
+    expMonth: "",
+    expYear: "",
+    shipmentMethod: "",
+  });
   return (
     <>
       <SkeletonTheme baseColor="#313131" highlightColor="#525252">
@@ -21,29 +35,14 @@ function App() {
           <Route path="/product/:id" element={<Product />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/Signup" element={<Signup />} />
-          <Route path="/Checkout" element={<Checkout />} />
-          <Route path="/Reciept" element={<Reciept />} />
+          <Route
+            path="/Checkout"
+            element={<Checkout info={info} setInfo={setInfo} />}
+          />
+          <Route path="/Reciept" element={<Reciept info={info} />} />
         </Routes>
       </SkeletonTheme>
     </>
-    // <div>
-    //   <Generate
-    //     tit="test"
-    //     pri={14453.5}
-    //     desc={"lorem ipsum set"}
-    //     img={"https://i.pravatar.cc"}
-    //     cat={"electronic"}
-    //     increment={++input}
-    //   />
-    //   <Generate
-    //     tit="test"
-    //     pri={14453.5}
-    //     desc={"lorem ipsum set"}
-    //     img={"https://i.pravatar.cc"}
-    //     cat={"electronic"}
-    //     increment={++input}
-    //   />
-    // </div>
   );
 }
 
