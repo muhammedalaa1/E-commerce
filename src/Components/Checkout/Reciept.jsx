@@ -29,17 +29,16 @@ const Reciept = ({ info }) => {
   };
   useEffect(() => {
     if (cartItems.length === 0) {
-      navigate("/", { replace: true });
+      // navigate("/", { replace: true });
+    }
+    if (cartItems.length > 0) {
+      addToOrders(cartItems);
+
+      handleClear();
+      console.log("hello");
     }
 
-    return () => {
-      if (cartItems.length > 0) {
-        addToOrders(cartItems);
-
-        handleClear();
-        console.log("hello");
-      }
-    };
+    return () => {};
   }, []);
 
   return (
@@ -63,7 +62,7 @@ const Reciept = ({ info }) => {
                   <h3 className="text-center font-family-secondary font-medium text-3xl mb-4">
                     Thank you for your purchase!
                   </h3>
-                  
+
                   <h4 className="text-center text-lg">
                     Your order completed successfully
                   </h4>
