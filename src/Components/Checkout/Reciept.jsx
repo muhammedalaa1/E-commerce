@@ -50,7 +50,7 @@ const Reciept = ({ info, Coupon }) => {
 
   useEffect(() => {
     if (cartItems.length === 0) {
-      // navigate("/", { replace: true });
+      navigate("/", { replace: true });
     }
     if (cartItems.length > 0) {
       addToOrders(cartItems);
