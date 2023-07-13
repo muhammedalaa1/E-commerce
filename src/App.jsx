@@ -26,6 +26,8 @@ function App() {
     expYear: "",
     shipmentMethod: "",
   });
+  const [Coupon, setCoupon] = useState({ coupon: "", flag: "" });
+
   return (
     <>
       <SkeletonTheme baseColor="#313131" highlightColor="#525252">
@@ -37,9 +39,19 @@ function App() {
           <Route path="/Signup" element={<Signup />} />
           <Route
             path="/Checkout"
-            element={<Checkout info={info} setInfo={setInfo} />}
+            element={
+              <Checkout
+                info={info}
+                setInfo={setInfo}
+                Coupon={Coupon}
+                setCoupon={setCoupon}
+              />
+            }
           />
-          <Route path="/Reciept" element={<Reciept info={info} />} />
+          <Route
+            path="/Reciept"
+            element={<Reciept info={info} Coupon={Coupon} />}
+          />
         </Routes>
       </SkeletonTheme>
     </>

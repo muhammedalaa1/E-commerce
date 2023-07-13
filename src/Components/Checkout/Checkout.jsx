@@ -14,7 +14,7 @@ import DiscountIcon from "@mui/icons-material/Discount";
 import "../Navbar/CartSideBar.scss";
 import useCart from "../../Hooks/Cart";
 
-const Checkout = ({ info, setInfo }) => {
+const Checkout = ({ info, setInfo, Coupon, setCoupon }) => {
   const { cartItems, addToOrders } = useCart();
   console.log(info.firstName);
   // console.log(cartItems);
@@ -23,7 +23,6 @@ const Checkout = ({ info, setInfo }) => {
   const navigate = useNavigate();
   const [buttonText, setButtonText] = useState("Make Payment");
   const [isActive, setIsActive] = useState(false);
-  const [Coupon, setCoupon] = useState({ coupon: "", flag: "" });
 
   const [shipmentMethod, setShipmentMethod] = useState("");
   const [country, setCountry] = useState("");
@@ -101,9 +100,7 @@ const Checkout = ({ info, setInfo }) => {
       [name]: value,
     }));
   };
-  
-  
-  
+
   const handleInputChange = (event) => {
     const { name, value } = event.target;
 

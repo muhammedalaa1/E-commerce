@@ -5,7 +5,7 @@ import "./Checkout.scss";
 import { useState, useEffect } from "react";
 import useCart from "../../Hooks/Cart";
 
-const Reciept = ({ info }) => {
+const Reciept = ({ info, Coupon }) => {
   const { orders, addToOrders, handleClear, cartItems } = useCart();
   const navigate = useNavigate();
   const { ordernumber } = orders;
@@ -27,9 +27,30 @@ const Reciept = ({ info }) => {
     });
     return total;
   };
+
+  const calculateDiscount = () => {
+    let total = calculateReceipt();
+    total *= 0.1;
+    return parseFloat(total.toFixed(2));
+  };
+
+  const calculateTotalAmount = () => {
+    var total = 0;
+    total += calculateReceipt();
+    // console.log(total);
+    if (Coupon.flag === "true") {
+      total -= calculateDiscount();
+    }
+    // console.log(total);
+    if (info.shipmentMethod === "World Wide") {
+      total += 5;
+    }
+    return total;
+  };
+
   useEffect(() => {
     if (cartItems.length === 0) {
-      navigate("/", { replace: true });
+      // navigate("/", { replace: true });
     }
     if (cartItems.length > 0) {
       addToOrders(cartItems);
@@ -138,13 +159,34 @@ const Reciept = ({ info }) => {
                         }
                       )}
                     </div>
-                    <div className="py-4 ">
+                    <div className="py-4 border-b border-gray-500">
                       <div className="flex justify-between items-center mb-2">
                         <p className="text-lg font-medium">subtotal</p>
                         <p className="text-right font-medium">
                           ${calculateReceipt()}.00
                         </p>
                       </div>
+                      <div className="flex justify-between items-center my-4">
+                        <p className="text-lg font-medium">Shipment Cost</p>
+                        <p className="text-right font-medium">
+                          ${info.shipmentMethod === "Local" ? "0" : "5"}.00
+                        </p>
+                      </div>
+                      <div className="flex justify-between items-center my-4">
+                        <p className="text-lg font-medium">Discount</p>
+                        <p className="text-right font-medium">
+                          $
+                          {Coupon.flag === "true"
+                            ? `${calculateDiscount()}`
+                            : "0"}
+                        </p>
+                      </div>
+                    </div>
+                    <div className="py-4 flex justify-between">
+                      <p className="text-lg font-medium text-right">Total :</p>
+                      <p className="text-lg font-medium text-right">
+                        ${calculateTotalAmount()}
+                      </p>
                     </div>
                   </div>
                 </div>
