@@ -215,7 +215,7 @@ const Home = () => {
 									className="mb-4 prd"
 									style={{
 										backgroundImage:
-											'url("https://cdn.chec.io/merchants/17851/images/b115a9b1e7206e735653a4a9a38f429ccca4186c5f08c293d7a5b|hair-beauty.jpg")',
+											'url("../../.././imgs/b115a9b1e7206e735653a4a9a38f429ccca4186c5f08c293d7a5b_hair-beauty.jpg")',
 										backgroundPosition: "center center",
 										backgroundSize: "cover",
 									}}
@@ -223,7 +223,7 @@ const Home = () => {
 								<Generate
 									tit="Hair Beauty Bath"
 									id={4}
-									img="https://cdn.chec.io/merchants/17851/images/b115a9b1e7206e735653a4a9a38f429ccca4186c5f08c293d7a5b|hair-beauty.jpg"
+									img="../../.././imgs/b115a9b1e7206e735653a4a9a38f429ccca4186c5f08c293d7a5b_hair-beauty.jpg"
 									desc="Made for your hair, a bath foam that brings your hair back to life."
 									pri="$25.00"
 									cat="hair"
