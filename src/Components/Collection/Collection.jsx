@@ -5,9 +5,7 @@ import Footer from "../Footer/Footer";
 import Generate from "../Home/Generate";
 import "./Product.scss";
 import "./Collection.scss";
-import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
-import { animateScroll as scroll } from "react-scroll";
 
 const Collection = () => {
 	useEffect(() => {
