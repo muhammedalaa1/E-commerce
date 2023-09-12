@@ -8,7 +8,7 @@
     "predeploy": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "deploy" : "gh-pages -d dist"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@emotion/react": "^11.11.0",
@@ -22,6 +22,7 @@
     "react-icons": "^4.9.0",
     "react-loading-skeleton": "^3.3.1",
     "react-router-dom": "^6.11.2",
+    "react-scroll": "^1.8.9",
     "react-slick": "^0.29.0",
     "react-slider": "^2.0.5",
     "sass": "^1.62.1",

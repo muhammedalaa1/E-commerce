@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Nav from "../Navbar/Nav";
 import { Link } from "react-router-dom";
 import Footer from "../Footer/Footer";
@@ -7,7 +7,22 @@ import "./Product.scss";
 import "./Collection.scss";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
+import { animateScroll as scroll } from "react-scroll";
+
 const Collection = () => {
+	useEffect(() => {
+		const hash = window.location.hash.substring(1);
+		if (hash) {
+			const element = document.getElementById(hash);
+			if (element) {
+				window.scrollTo({
+					top: element.offsetTop - 100,
+					behavior: "smooth",
+				});
+			}
+		}
+	}, []);
+
 	return (
 		<>
 			<Nav addClass={true} />
@@ -212,7 +227,9 @@ const Collection = () => {
 										</div>
 									</div>
 									<div id="body-products" className="mt-3">
-										<p className="text-xl font-medium mb-6">Body Products</p>
+										<p className="text-xl font-medium mb-6 mt-3">
+											Body Products
+										</p>
 										<div className="row mb-12 collection-1">
 											<div className="w-6/12 sm:w-4/12 md:w-3/12">
 												<Link
