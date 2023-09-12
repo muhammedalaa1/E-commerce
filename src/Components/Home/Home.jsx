@@ -94,7 +94,7 @@ const Home = () => {
 							</div>
 							<div className="md:w-1/3 w-full mb-12 collection-item px-2">
 								<Link
-									to="/collection#hair-products"
+									to="/Collection#hair-products"
 									className="items-center text-black cursor-pointer mb-12 flex-col"
 								>
 									<div className="hair collection-item-image"></div>
